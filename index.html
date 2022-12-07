@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form id="frm1" action="/action_page.php">
+<p>Kant(Ex)am based on the Prolegomena</p>
+
+
+
+
+
+
+
+
+
+
+<p>Question 1: Enter the missing word (dotted) in lower-case letters:</p>
+</form>
+
+<body onLoad="myFunction1();">
+
+  <p id="demo3"></p>
+
+
+      Solution1 <input type="text" name="fname" id="ttt" value=""><br>
+      <button onclick="myFunction()">Send answer</button>
+      <p id="demo14"></p>
+
+
+   <p id="demo4"></p>
+      <p id="demo2"></p>
+                <p id="demo23"></p>
+
+   Solution2 <input type="text" name="fname1" id="ttt1" value=""><br>
+   <button onclick="myFunction_()">Send answer</button>
+   <p id="demo120"></p>
+
+<p>Your Exam score is: </p>
+   <p id="demo146"></p>
+
+
+
+
+
+
+  <script>
+ var score =0;
+  var keyw_par1 = ["science", "cognition", "experience", "reason"];
+  var keyw_par2 = ["propositions", "analytic", "synthetic", "propositions"];
+        var keyw_par2 = ["but", "sources", "must"];
+  var keyw_par3 = ["contradiction", "judgments", "synthetic"];
+  var par1 = "If one wishes to present a body of cognition as science, then one must first able to determine precisely the differentia it has in common with no other science, and which is therefore its distinguishing feature, otherwise the boundaries of all the sciences run together, and none of them can be dealt with thoroughly according to its own nature. Whether this distinguishing feature consists in a difference of the object or the source of cognition, or even of the type of cognition, or some if not all of these things together, the idea of the possible science an its territory depends first of all upon it. First, concerning the sources of metaphysical cognition, it already lies in the concept of metaphysics that they cannot be empirical. The principles of such cognition (which include not only its fundamental propositions or basic principles, but also its fundamental concepts) must therefore never be taken from experience; for the cognition is supposed to be not physical but metaphysical, ie, lying beyond experience. Therefore it will be based upon neither outer experience, which constitutes the source of physics proper, nor inner, which provides the foundation of empirical psychology. It is therefore cognition a priori, or from pure understanding and pure reason. In this, however, there would be nothing to differentiate it from pure mathematics; it must therefore be denominated pure philosophical cognition; but concerning the meaning of this expression I refer to the Critique of Pure Reason, pp 712f, where the distinction between these two types of use of reason has been presented clearly and sufficiently. So much on the sources of metaphysical cognition."
+  //
+  //
+  var par3 = "This division is indispensable with regard to the critique of human understanding, and therefore deserves to be classical in it. Other than that. I don’t know that it has much utility anywhere else. And in this I find the reason why dogmatic philosophers (who always sought the sources of metaphysical judgments only in metaphysics itself, and not outside it in the pure laws of reason in general) neglected this division, which appears to come forward of itself, and, like the famous Wolff, or the acute Baumgarten following in his footsteps, could try to find the proof of the principle of sufficient reason, which obviously is synthetic, in the principle of contradiction. By contrast I find a hint of this division already in Locke’s essays on human understanding. For in Book 4, chapter 3, §9 f., after he had already discussed the various connections of representations in judgments and the sources of the connections, of which he located the one in identity or contradiction (analytic judgments) but the other in the existence of representations in a subject (synthetic judgments), he then acknowledges in §10 that our cognition (a priori) of these last is very constricted and almost nothing at all. But there is so little that is definite and reduced to rules in what he says about this type of cognition, that it is no wonder if no one, and in particular not even Hume, was prompted by it to contemplate propositions of this type. For such general yet nonetheless definite principles are not easily learned from others who have only had them floating obscurely before them. One must first have come to them oneself through one’s own reflection, after which one also finds them elsewhere, where one certainly would not have found them before, because the authors did not even know themselves that their own remarks were grounded on such an idea. Those who never think for themselves in this way nevertheless possess the quick-sightedness to spy everything, after it has been shown to them, in what has already been said elsewhere, where no one at all could see it before."
+
+//    var par2 =  "On the sources of metaphysics. Metaphysical cognition must contain nothing but judgments a priori, as required by the distinguishing feature of its sources. "
+
+//But judgments may have any origin whatsoever, or be constituted in whatever manner according to their logical form, and yet there is nonetheless a distinction
+//       between them according to their content, by dint of which they are either merely explicative and add nothing to the content of the cognition, or
+//       ampliative and augment the given cognition; the first may be called analytic judgments, the second synthetic. Analytic judgments say nothing in the predicate except what was actually thought already in the concept of the subject, though not so clearly nor
+//       with the same consciousness. If I say: All bodies are extended, then I have
+//       not in the least amplified my concept of body, but have merely resolved
+//       it, since extension, although not explicitly said of the former concept
+//       prior to the judgment, nevertheless was actually thought of it; the judgment is therefore analytic. By contrast, the proposition: Some bodies are
+//       heavy, contains something in the predicate that is not actually thought
+//       in the general concept of body; it therefore augments my cognition, since it adds something to my concept, and must therefore be called a
+//       synthetic judgment. The common principle of all analytic judgments is the principle of contradiction. All analytic judgments rest entirely on the principle of contradiction and are by their nature a priori cognitions, whether the concepts that serve
+//       for their material be empirical or not. For since the predicate of an affirmative analytic judgment is already thought beforehand in the concept
+//       of the subject, it cannot be denied of that subject without contradiction.
+//       exactly so is its opposite necessarily denied of the subject in an analytic,
+//       but negative, judgment, and indeed also according to the principle of contradiction. So it stands with the propositions: Every body is extended,
+//       and: No body is unextended (simple).
+//       For that reason all analytic propositions are still a priori judgments even
+//       if their concepts are empirical, as in: Gold is a yellow metal; for in order
+//       to know this, I need no further experience outside my concept of gold,
+//       which includes that this body is yellow and a metal; for this constitutes my
+//       very concept, and I did not have to do anything except analyze it, without
+//       looking beyond it to something else. Synthetic judgments require a principle other than the principle
+//       of contradiction. There are synthetic judgments a posteriori whose origin is empirical; but
+//       there are also synthetic judgments that are a priori certain and that arise
+//       from pure understanding and reason. Both however agree in this, that
+//       they can by no means arise solely from the principlee of analysis, namely
+//       the principle of contradiction; they demand yet a completely different
+//       principle,f though they always must be derived from some fundamental proposition,g whichever it may be, in accordance with the principle of
+//       contradiction; for nothing can run counter to this principle, even though
+//       everything cannot be derived from it. I shall first classify the synthetic
+//       judgments. Judgments of experience are always synthetic. For it would be absurd
+//       to base an analytic judgment on experience, since I do not at all need to go
+//       beyond my concept in order to formulate the judgment and therefore have
+//       no need for any testimony from experience. That a body is extended, is a
+//       proposition that stands certain a priori, and not a judgment of experience. For before I go to experience, I have all the conditions for my judgment
+// already in the concept, from which I merely extract the predicate in
+// accordance with the principle of contradiction, and by this means can
+// simultaneously become conscious of the necessity of the judgment, which
+// experience could never teach me. Mathematical judgments are one and all synthetic. This proposition
+// appears to have completely escaped the observations of analysts of human reason up to the present, and indeed to be directly opposed to all of
+// their conjectures, although it is incontrovertibly certain and very important in its consequences. Because they found that the inferences of the
+// mathematicians all proceed in accordance with the principle of contradiction (which, by nature, is required of any apodictic certainty), they were
+// persuaded that the fundamental propositions were also known through
+// the principle of contradiction, in which they were very mistaken; for a
+// synthetic proposition can of course be discerned in accordance with the
+// principle of contradiction, but only insofar as another synthetic proposition is presupposed from which the first can be deduced, never however
+// in itself.
+// First of all it must be observed: that properly mathematical propositions are always a priori and not empirical judgments, because they carry
+// necessity with them, which cannot be taken from experience. But if this
+// will not be granted me, very well, I will restrict my proposition to pure
+// mathematics, the concept of which already conveys that it contains not
+// empirical but only pure cognition a priori.
+// One might well at first think: that the proposition 7 + 5 = 12 is a
+// purely analytic proposition that follows from the concept of a sum of
+// seven and five according to the principle of contradiction. However, upon
+// closer inspection, one finds that the concept of the sum of 7 and 5 contains nothing further than the unification of the two numbers into one,
+// through which by no means is thought what this single number may be
+// that combines the two. The concept of twelve is in no way already thought
+// because I merely think to myself this unification of seven and five, and
+// I may analyze my concept of such a possible sum for as long as may be,
+// still I will not meet with twelve therein. One must go beyond these concepts, in making use of the intuition that corresponds to one of the two,
+// such as one’s five fingers, or (like Segner in his arithmetic) five points,
+// and in that manner adding the units of the five given in intuition step by
+// step to the concept of seven. One therefore truly amplifies one’s concept
+// through this proposition 7 + 5 = 12 and adds to the first concept a new
+// one that was not thought in it; that is, an arithmetical proposition is always
+// synthetic, which can be seen all the more plainly in the case of somewhat
+// larger numbers, for it is then clearly evident that, though we may turn
+// and twist our concept as we like, we could never find the sum through the
+// mere analysis of our concepts, without making use of intuition.
+// Nor is any fundamental proposition of pure geometry analytic. That the
+// straight line between two points is the shortest is a synthetic proposition.
+// For my concept of the straight contains nothing of magnitude,h but only
+// a quality. The concept of the shortest is therefore wholly an addition and
+// cannot be extracted by any analysis from the concept of the straight line.
+// Intuition must therefore be made use of here, by means of which alone
+// the synthesis is possible. Some other fundamental propositions that geometers presuppose are
+// indeed actually analytic and rest on the principle of contradiction; however, they serve only, like identical propositions, as links in the chain of
+// method and not as principles: e.g., a = a, the whole is equal to itself, or (a
+// + b) > a, i.e., the whole is greater than its part. And indeed even these, although they are valid from concepts alone, are admitted into mathematics
+// only because they can be exhibited in intuition.
+// Iti is merely ambiguity of expression which makes us commonly believe here that the predicate of such apodictic judgments already lies
+// in our concept and that the judgment is therefore analytic. Namely, we
+// are required to add in thought a particular predicate to a given concept,
+// and this necessity is already attached to the concepts. But the question
+// is not, what we are required to add in thought to a given concept, but
+// what we actually think in it, even if only obscurely, and then it becomes
+// evident that the predicate attaches to such concepts indeed necessarily,
+// though not immediately, but rather through an intuition that has to be
+// added. The essential feature of pure mathematical cognition, differentiating it
+// from all other a priori cognition, is that it must throughout proceed not
+// from concepts, but always and only through the construction of concepts
+// (Critique, p. 713). Because pure mathematical cognition, in its propositions, must therefore go beyond the concept to that which is contained
+// in the intuition corresponding to it, its propositions can and must never
+// arise through the analysis of concepts, i.e., analytically, and so are one and
+// all synthetic.
+// I cannot, however, refrain from noting the damage that neglect of
+// this otherwise seemingly insignificant and unimportant observation has
+// brought upon philosophy.Hume, when he felt the call, worthy of a philosopher, to cast his gaze over the entire field of pure a priori cognition, in
+// which the human understanding claims such vast holdings, inadvertently
+// lopped off a whole (and indeed the most considerable) province of the
+// same, namely pure mathematics, by imagining that the nature and so to
+// speak the legal constitution of this province rested on completely different
+// principles, namely solely on the principle of contradiction; and although
+// he had by no means made a classification of propositions as formally and
+// generally, or with the nomenclature, as I have here, it was nonetheless just
+// as if he had said: Pure mathematics contains only analytic propositions,
+// but metaphysics contains synthetic propositions a priori. Now he erred
+// severely in this, and this error had decisively damaging consequences for
+// his entire conception. For had he not done this, he would have expanded
+// his question about the origin of our synthetic judgments far beyond his
+// metaphysical concept of causality and extended it also to the possibility
+// of a priori mathematics; for he would have had to accept mathematics
+// as synthetic as well. But then he would by no means have been able to
+// found his metaphysical propositions on mere experience, for otherwise he
+// would have had to subject the axioms of pure mathematics to experience
+// as well, which he was much too reasonable to do.6 The good company
+// in which metaphysics would then have come to be situated would have
+// secured it against the danger of scornful mistreatment; for the blows that
+// were intended for the latter would have had to strike the former as well,
+// which was not his intention, and could not have been; and so the acute
+// man would have been drawn into reflections which must have been similar
+// to those with which we are now occupied, but which would have gained
+// infinitely from his inimitably fine presentation. Properly metaphysical judgments are one and all synthetic. Judgments belonging to metaphysics must be distinguished from properly metaphysical judgments. Very many among the former are analytic, but they
+// merely provide the means to metaphysical judgments, toward which the
+// aim of the science is completely directed, and which are always synthetic.
+// For if concepts belong to metaphysics, e.g., that of substance, then the
+// judgments arising from their mere analysis necessarily belong to metaphysics as well, e.g., substance is that which exists only as subject, etc.,
+// and through several such analytic judgments we try to approach the definition of those concepts. Since, however, the analysis of a pure concept of
+// the understanding (such as metaphysics contains) does not proceed in a
+// different manner from the analysis of any other, even empirical, concept
+// which does not belong to metaphysics (e.g., air is an elastic fluid, the elasticity of which is not lost with any known degree of cold), therefore the
+// concept may indeed be properly metaphysical, but not the analytic judgment. for this science possesses something special and proper to it in the
+// generation of its a priori cognitions, which generation must therefore be
+// distinguished from what this science has in common with all other cognitions of the understanding; thus, e.g., the proposition: Allthat is substance
+// in things persists, is a synthetic and properly metaphysical proposition.
+// If one has previously assembled, according to fixed principles, the a
+// priori concepts that constitute the matter of metaphysics and its building
+// material, then the analysis of these concepts is of great value; it can even
+// be presented separately from all the synthetic propositions that constitute
+// metaphysics itself, as a special part (as it were as philosophia definitiva) containing nothing but analytic propositions belonging to metaphysics
+// For in fact such analyses do not have much use anywhere except in metaphysics, that is, with a view toward the synthetic propositions that are to
+// be generated from such previously analyzed concepts.
+// The conclusion of this section is therefore: that metaphysics properly
+// has to do with synthetic propositions a priori, and these alone constitute its
+// aim, for which it indeed requires many analyses of its concepts (therefore
+// many analytic judgments), in which analyses, though, the procedure is no
+// different from that in any other type of cognition when one seeks simply to
+// make its concepts clear through analysis. But the generation of cognition
+// a priori in accordance with both intuition and concepts, ultimately of
+// synthetic propositions a priori as well, and specifically in philosophical
+// cognition, forms the essential content of metaphysics."
+
+
+  var a=[];
+   var b=[];
+  for (var i = 0; i < 2; i++) {
+
+  a[i] = Math.floor(Math.random() * 2);
+  b[i] = Math.floor(Math.random() * 3);}
+
+//  a=[1,0];
+  //b=[0,1];
+  function myFunction1(a,b) {
+    //var t =a;
+  //  document.getElementById("demo2").innerHTML = b;
+  //  document.getElementById("demo23").innerHTML = a;
+    const text_ = new Array(2);
+    for (var i = 0; i < 3; i++) {
+
+    //var ran = Math.floor(Math.random() * 3);
+  //  var ran2 = Math.floor(Math.random() * 2);
+    //document.getElementById("demo19").innerHTML = ran;
+  var  ran = a;
+  var   ran2=b;
+
+
+
+    //Add the first 10 paragraphs
+
+    if (ran2==0){
+      par1  =par1;
+
+              keyw= keyw_par1[ran];}
+//else if (ran2==1)
+
+  //  { par1  =par2;
+    //
+  //         keyw= keyw_par2[ran];}
+
+
+    else{
+      par1=par3;
+
+              keyw= keyw_par3[ran];
+    }
+
+    //document.getElementById("demo19").innerHTML = ran2;
+
+
+    //var par1 = "This is the, test. I will check."
+
+    par1 = par1.replace(/,/g, "");
+    var par2= par1.split('.').join('');
+    var arrText = par1.split(" ");
+    var arrText2 = par2.split(" ");
+
+
+
+
+    const lengtha = arrText.length;
+    var res = arrText.indexOf("to");
+    var array = ["test234", "test9495", "test234", "test93992", "test234"];
+    var j=0;
+    var arr = [];
+    for (i=0;i<arrText.length;i++) {
+      if (arrText2[i] == keyw) {
+
+        arr[j]=i
+        j=j+1;
+      }
+    }
+    const arr1 = ["te,st", "tes,t1"]
+  //  document.getElementById("demo120").innerHTML = keyw;
+    for(const x of arr) {
+
+      arrText[x] = arrText[x].replace(keyw, '_______');
+    }
+
+
+
+    var j=0;
+    var arr_dot = [];
+    for (i=0;i<arrText2.length;i++) {
+      if (arrText[i].includes(".")) {
+
+        arr_dot[j]=i
+        j=j+1;
+      }
+    }
+
+
+    //compare arr_dot with arr to determine what text to show:
+    //  document.getElementById("demo19").innerHTML = arr;
+    var min = arr[0];
+    //document.getElementById("demo19").innerHTML = min;
+    var max_ = arr[arr.length-1];
+    //document.getElementById("demo19").innerHTML = max_;
+
+    var arr_dot = [0].concat(arr_dot) // [ 4, 3, 2, 1 ]
+
+    var beg_ = 0;
+    var end_ = arr_dot[arr_dot.length-1];;
+
+    for (q=0;q<arr_dot.length;q++) {
+      if ( min>arr_dot[q] && min<arr_dot[q+1] ) {
+
+        beg_=arr_dot[q];
+      }}
+
+      for (q=0;q<arr_dot.length;q++) {
+        if ( max_>arr_dot[q] && max_<=arr_dot[q+1] ) {
+
+          end_=arr_dot[q+1];
+        }}
+
+        if (beg_!=0){
+          beg_ = beg_+1;
+        }
+        arrText = arrText.slice(beg_,end_+1);
+        let texta = arrText.join(" ");
+
+                                //document.getElementById("demo3").innerHTML = texta;
+        text_.fill(texta);
+                    //  document.getElementById("demo2").innerHTML = text_[0]
+                      //  document.getElementById("demo3").innerHTML = text_[1]
+      }
+
+      return text_[1];
+
+
+      //    document.getElementById("demo3").innerHTML = text_[];
+          // document.getElementById("demo2").innerHTML = text_[1];
+                //document.getElementById("demo3").innerHTML = texta;
+
+
+      }
+
+
+
+
+
+      function myFunction_() {
+
+
+
+        var  ran = a[1];
+        var   ran2=b[1];
+
+       //
+       //
+       //
+           if (ran == 0) {
+             var keyw2 = keyw_par1[ran2];
+            } else {
+           var par1=par3;
+             var keyw2= keyw_par3[ran2];}
+
+
+
+        var x = document.getElementById("ttt1").value;
+        var text = "";
+        var i;
+        var greeting = "false";
+        const time = 10;
+        if (x == keyw2) {
+          greeting = "correct";
+          score = score +1;
+
+
+        }
+
+
+        document.getElementById("demo120").innerHTML = greeting;
+
+        document.getElementById("demo146").innerHTML = score/10*100;
+
+
+
+      }
+
+
+      function myFunction() {
+
+
+        var  ran = a[0];
+        var   ran2=b[0];
+
+       //
+       //
+       //
+
+               if(ran2==0){
+
+
+                        var keyw1= keyw_par1[ran];
+               } else{
+
+
+                      var   keyw1= keyw_par3[ran];
+               }
+
+
+
+        var x = document.getElementById("ttt").value;
+        var text = "";
+        var i;
+        var greeting = "false";
+        const time = 10;
+        if (x == keyw1) {
+          greeting = "correct";
+          score = score +1;
+
+
+        }
+
+        document.getElementById("demo14").innerHTML = greeting;
+
+      }
+
+
+
+                function myFunction3() {
+
+
+                  var  ran = a[2];
+                  var   ran2=b[2];
+
+                 //
+                 //
+                 //
+
+                         if(ran2==0){
+
+
+                                  var keyw1= keyw_par1[ran];
+                         } else{
+
+
+                                var   keyw1= keyw_par3[ran];
+                         }
+
+
+
+                  var x = document.getElementById("ttt").value;
+                  var text = "";
+                  var i;
+                  var greeting = "false";
+                  const time = 10;
+                  if (x == keyw1) {
+                    greeting = "correct";
+                    score = score +1;
+
+
+                  }
+
+                  document.getElementById("demo14").innerHTML = greeting;
+
+                }
+
+
+
+
+
+    //  document.getElementById("demo120").innerHTML = a;
+      document.getElementById("demo3").innerHTML = myFunction1(a[0],b[0]);
+      document.getElementById("demo4").innerHTML = myFunction1(a[1],b[1]);
+
+
+    //  document.getElementById("demo14").innerHTML = greeting;
+
+
+      </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+    </html>

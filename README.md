@@ -1,4 +1,5 @@
 # Kantex https://kantex.000webhostapp.com/
+![Immanuel_Kant_(painted_portrait)](https://user-images.githubusercontent.com/111250702/206230088-133e12c9-8fc9-41d7-900d-d6fb5bb8839a.jpg)
 Prototype of a program in JavaScript that tests Kant's ideas based on the Prolegomena. Words are omitted and should be correctly completed by the knowing reader.
 Extensions on this branch are very welcome. Only the first two paragraphs of the Prolegomena are taken to purpose so far. Further text must be outsourced from the index.html file. 
 
